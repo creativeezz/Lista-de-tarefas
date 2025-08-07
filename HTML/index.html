@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de tarefas</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <header class="bg-primary text-white text-center py-3 shadow">
+        <h1><i class="bi bi-list-check"></i> Organizador de Tarefas</h1>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4 text-primary">Minhas Tarefas</h5>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="taskInput" placeholder="Digite uma nova tarefa">
+                                <input type="date" class="form-control" id="taskData">
+                                <button class="btn btn-primary" id="adicionarTarefa"><i class="bi bi-plus-lg"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Á Fazer</h5>
+                            <ul class="list-group" id="taskList">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Em andamento</h5>
+                            <ul class="list-group" id="taskListEmAndamento">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Tarefas Concluídas</h5>
+                            <ul class="list-group" id="taskListConcluidas">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../SCRIPT/script.js"></script>
+</body>
+</html>
