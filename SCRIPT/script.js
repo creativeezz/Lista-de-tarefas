@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const adicionarTarefa = document.getElementById('adicionarTarefa');
     const taskList = document.getElementById('taskList');
     const filtroInput = document.getElementById('botoesFiltro');
+    let taskConcluidas = document.getElementById('contadorConcluidas');
+    let taskTotal = document.getElementById('contadorTotal');
+    let taskPendentes = document.getElementById('contadorPendentes');
+    
 
     function filtrarTarefas() {
         if (botoesFiltro.value === 'concluidas') {
@@ -14,8 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function criarItemTarefa(texto, data) {
         const li = document.createElement('li');
-        li.className = 'list-group-item d-flex justify-content-between align-items-center mb-3';
-        li.id = 'taskItem';
+        li.className = 'list-group-item d-flex justify-content-between align-items-center m-3 py-4';
+        li.id = 'pendente';
+        taskTotal.textContent = document.querySelectorAll('li').length + 1;
+        taskPendentes.textContent = document.querySelectorAll('li').length + 1;
 
         const span = document.createElement('span');
         span.textContent = texto;
@@ -38,7 +44,12 @@ document.addEventListener('DOMContentLoaded', function () {
         inputConcluir.onclick = function () {
             li.classList.toggle('list-group-item-success');
             span.classList.toggle('text-decoration-line-through');
-            if (li.classList.contains('list-group-item-success')) {
+            li.id = li.classList.contains('list-group-item-success') ? 'concluida' : 'pendente';
+            
+            taskConcluidas.textContent = document.querySelectorAll('.list-group-item-success').length;
+            taskPendentes.textContent = document.querySelectorAll('.list-group-item-success').length + 1;
+
+            if (li.classList.contains('a')) {
                 li.classList.add('anim-concluida');
                 setTimeout(() => li.classList.remove('anim-concluida'), 500);
             }
@@ -50,6 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
         btnRemover.title = 'Remover';
         btnRemover.onclick = function () {
             li.remove();
+            taskTotal.textContent = document.querySelectorAll('li').length;
+            taskPendentes.textContent = document.querySelectorAll('li').length;
+            taskConcluidas.textContent = document.querySelectorAll('.list-group-item-success').length;
         };
 
         btnGroup.appendChild(inputConcluir);

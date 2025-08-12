@@ -1,0 +1,72 @@
+body{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.contadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#pendentesTexto, #concluidasTexto, #totalTexto{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#contadorTotal, #contadorPendentes, #contadorConcluidas{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contador .badge .cards {
+    min-width: 110px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.cards {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+#botoesFiltro{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#filtroTodos, #filtroPendentes, #filtroConcluidas{
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.ordernar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+#pendente{
+    border-left: 5px solid orange !important;
+    background-color: rgb(255, 204, 110) !important;
+}
+
+#concluida{
+    border-left: 5px solid green !important;
+    background-color: rgb(78, 194, 78);
+}
