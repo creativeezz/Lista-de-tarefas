@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organizador de tarefas</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -16,7 +15,6 @@
     <header class="text-center py-3 shadow">
         <h1 class="py-4 text-white"><i class="bi bi-list-check"></i> PlanUP</h1>
         <p class="text-white opacity-75">Organize seu dia. Alcance seus objetivos.</p>
-
     </header>
 
     <main>
@@ -62,11 +60,10 @@
 
                         <div class="mb-3" id="botoesFiltro">
                             <div class="btn-group" role="group" aria-label="Filtros de tarefas">
-                                <button type="button" class="btn" id="filtroTodos"><i class="bi bi-asterisk me-2"></i>Todos</button>
-                                <button type="button" class="btn"
-                                    id="filtroPendentes">Pendentes</button>
-                                <button type="button" class="btn"
-                                    id="filtroConcluidas">Concluídas</button>
+                                <button type="button" class="btn" id="filtroTodos"><i
+                                        class="bi bi-asterisk me-2"></i>Todos</button>
+                                <button type="button" class="btn" id="filtroPendentes">Pendentes</button>
+                                <button type="button" class="btn" id="filtroConcluidas">Concluídas</button>
                             </div>
                         </div>
 
@@ -90,14 +87,16 @@
         <button id="mudarTema" class="btn bg-dark">
             <i class="bi bi-moon"></i>
         </button>
-        <a href="../../lista-tarefas-login/login.html" id="logoff" class="btn bg-dark">
+        <a href="../../lista-tarefas-login/login.html" id="logoff" class="bg-dark">
             <i class="bi bi-box-arrow-right"></i>
         </a>
+
     </main>
 
     <footer>
         <h5 class="text-center mt-4">&copy; PlanUP</h5>
     </footer>
+
     <script src="../SCRIPT/script.js"></script>
 </body>
 
