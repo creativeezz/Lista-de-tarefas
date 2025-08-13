@@ -15,11 +15,15 @@
     <header class="text-center py-3 shadow bg-success">
         <h1 class="py-4 text-white"><i class="bi bi-list-check"></i> Organizador de Tarefas</h1>
         <p class="text-white opacity-75">Organize sua vida</p>
+        <button id="mudarTema" class="position-absolute top-0 end-0 m-3">
+        <i class="bi bi-moon"></i> Tema Escuro </button>
+</button>
+
     </header>
     <main>
         <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="col-9">
+                <div class="col-12 col-md-9">
                     <div class="card shadow">
                         <div class="card-body">
                             <h5 class="card-title mb-4 text-center"><i class="bi bi-plus-circle me-2"></i>Adicionar
@@ -69,7 +73,7 @@
 
                         <div class="ordernar">
                             <label class="form-label me-2" for="ordenarSelect">Ordenar por:</label>
-                            <select class="form-select w-auto" id="ordenarSelect">
+                            <select class="form-select w-auto py-1" id="ordenarSelect">
                                 <option value="dataCrescente">Data crescente</option>
                                 <option value="dataDecrescente">Data decrescente</option>
                             </select>
