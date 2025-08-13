@@ -43,6 +43,7 @@ header{
 #adicionarTarefa {
     background: #042A2B;
     color: white;
+    font-weight: bold;
 }
 
 .cards {
@@ -109,7 +110,6 @@ body.bg-dark .card {
 
 body.bg-dark .list-group-item {
     background-color: #2a2a2a;
-    color: white;
 }
 
 body.bg-dark .form-control {
@@ -182,9 +182,21 @@ body.bg-dark .ordernar .form-label {
     padding: 15px 10px;
     font-size: 0.9rem;
     border-radius: 50px;
+    color: white;
 }
 
 span {
     font-size: 1.2rem;
     font-weight: bold;;
+}
+
+#logoff {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 1000;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    color: white;
 }
