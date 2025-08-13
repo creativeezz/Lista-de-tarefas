@@ -140,12 +140,13 @@ body.bg-dark .loginLink:hover {
     color: white;
 }
 
-.registro-icon {
+body.bg-dark .registrar-icon {
+    color: white;
+    
+}
+
+.registrar-icon {
     font-size: 4rem;
     color: #042A2B;
     margin-bottom: 1rem;
-}
-
-body.dark .registro-icon {
-    color: white;
 }
