@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <header class="text-center py-3 shadow bg-success">
-        <h1 class="py-4 text-white"><i class="bi bi-list-check"></i> Organizador de Tarefas</h1>
-        <p class="text-white opacity-75">Organize sua vida</p>
+    <header class="text-center py-3 shadow">
+        <h1 class="py-4 text-white"><i class="bi bi-list-check"></i> PlanUP</h1>
+        <p class="text-white opacity-75">Organize seu dia. Alcance seus objetivos.</p>
         <button id="mudarTema" class="btn btn-dark">
         <i class="bi bi-moon"></i></button>
 </button>
@@ -32,12 +32,12 @@
                                 <input type="text" class="form-control" id="taskInput"
                                     placeholder="Digite uma nova tarefa">
                                 <input type="date" class="form-control" id="taskData">
-                                <button class="btn btn-success" id="adicionarTarefa"><i class="bi bi-plus-lg"></i>
+                                <button class="btn" id="adicionarTarefa"><i class="bi bi-plus-lg"></i>
                                     Adicionar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card shadow mt-4">
+                    <div class="card shadow mt-4" id="listaTarefas">
                         <div class="card-body">
                             <h5 class="card-title mb-4 text-center" id="titulo"><i
                                     class="bi bi-clipboard-check me-2"></i>Lista de Tarefas</h5>
@@ -63,10 +63,10 @@
 
                         <div class="mb-3" id="botoesFiltro">
                             <div class="btn-group" role="group" aria-label="Filtros de tarefas">
-                                <button type="button" class="btn btn-outline-success" id="filtroTodos"><i class="bi bi-asterisk me-2"></i>Todos</button>
-                                <button type="button" class="btn btn-outline-success"
+                                <button type="button" class="btn" id="filtroTodos"><i class="bi bi-asterisk me-2"></i>Todos</button>
+                                <button type="button" class="btn"
                                     id="filtroPendentes">Pendentes</button>
-                                <button type="button" class="btn btn-outline-success"
+                                <button type="button" class="btn"
                                     id="filtroConcluidas">Concluídas</button>
                             </div>
                         </div>
@@ -89,6 +89,9 @@
         </div>
         </div>
     </main>
+    <footer>
+        <h5 class="text-center mt-4">&copy; PlanUP</h5>
+    </footer>
     <script src="../SCRIPT/script.js"></script>
 </body>
 
