@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (data) {
             const small = document.createElement('small');
-            small.className = 'text-muted ms-2';
+            small.className = 'text-muted fs-5 ms-2';
             small.textContent = `(${data.split('-').reverse().join('/')})`;
             span.appendChild(small);
         }
@@ -133,17 +133,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (localStorage.getItem('tema') === 'dark') {
         document.body.classList.add('dark');
-        mudarTema.innerHTML = '<i class="bi bi-sun"></i> Tema Claro';
+        mudarTema.innerHTML = '<i class="bi bi-sun"></i>';
     }
 
     mudarTema.addEventListener('click', function () {
         document.body.classList.toggle('dark');
         if (document.body.classList.contains('dark')) {
             localStorage.setItem('tema', 'dark');
-            mudarTema.innerHTML = '<i class="bi bi-sun"></i> Tema Claro';
+            mudarTema.innerHTML = '<i class="bi bi-sun"></i>';
+            mudarTema.classList.add('btn-light');
+            mudarTema.classList.remove('btn-dark');
         } else {
             localStorage.setItem('tema', 'light');
-            mudarTema.innerHTML = '<i class="bi bi-moon"></i> Tema Escuro';
+            mudarTema.innerHTML = '<i class="bi bi-moon"></i>';
+            mudarTema.classList.remove('btn-light');
+            mudarTema.classList.add('btn-dark');
         }
     });
 
