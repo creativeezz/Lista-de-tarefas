@@ -96,7 +96,23 @@ header{
 #concluida{
     border-left: 5px solid green !important;
     background-color: rgb(78, 194, 78);
+    animation: taskConcluida 0.5s ease-in-out;
 }
+
+@keyframes taskConcluida {
+    0% {
+        transform: scale(1);
+        background-color: rgb(255, 204, 110);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgb(78, 194, 78);
+    }
+}
+
 
 footer{
     background-color: #042A2B;
