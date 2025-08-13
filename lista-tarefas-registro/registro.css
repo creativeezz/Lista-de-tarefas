@@ -15,7 +15,7 @@ header {
     color: black;
 }
 
-.login-container {
+.registro-container {
     flex: 1;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@ header {
     padding: 2rem 1rem;
 }
 
-.login-card {
+.registro-card {
     max-width: 400px;
     width: 100%;
     backdrop-filter: blur(10px);
@@ -31,21 +31,21 @@ header {
     border: none;
 }
 
-.botaoLogin {
+.registrar-btn {
     background: #042A2B;
     border: none;
-    padding: 12px;
+    padding: 5px;
     font-weight: bold;
     transition: all 0.3s ease;
     border-radius: 10px;
     margin: 0;
 }
 
-#botaoEntrar {
+#botaoRegistrar {
     color: white;
 }
 
-.botaoLogin:hover {
+.registro-btn:hover {
     background: #054748;
     color: white;
 }
@@ -66,15 +66,15 @@ header {
     font-weight: bold;
 }
 
-.registroLink {
+.loginLink {
     color: #042A2B;
     text-decoration: none;
     font-weight: bold;
 }
 
-.registroLink:hover {
+.loginLink:hover {
     color: #054748;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 footer {
@@ -101,14 +101,15 @@ footer {
 }
 
 body.bg-dark {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: white;
 }
 
-body.bg-dark #subtitulo {
+body.bg-dark .registro-container #subtitulo {
     color: white;
 }
 
-body.bg-dark .login-card {
+body.bg-dark .registro-card {
     background: rgba(30, 30, 30, 0.95);
     color: white;
 }
@@ -132,21 +133,20 @@ body.bg-dark .textoB {
     color: white;
 }
 
-body.bg-dark .registroLink {
+body.bg-dark .loginLink {
+    color:white;
+}
+
+body.bg-dark .loginLink:hover {
     color: white;
 }
 
-body.bg-dark .registroLink:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.login-icon {
+.registro-icon {
     font-size: 4rem;
     color: #042A2B;
     margin-bottom: 1rem;
 }
 
-body.bg-dark .login-icon {
+body.dark .registro-icon {
     color: white;
 }
