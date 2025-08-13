@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const elementoToast = document.getElementById('toastParaLogin');
+        const toast = new bootstrap.Toast(elementoToast);
+        toast.show();
+
+        //delay para ver o toast
+        setTimeout(() => {
+            event.target.submit();
+        }, 1000);
+    });
+
     const mudarTema = document.getElementById('mudarTema');
-    console.log(mudarTema);
-    
+
     if (localStorage.getItem('tema') === 'dark') {
         document.body.classList.add('bg-dark');
         mudarTema.innerHTML = '<i class="bi bi-sun"></i>';
@@ -12,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     mudarTema.addEventListener('click', function () {
         document.body.classList.toggle('bg-dark');
-        
+
         if (document.body.classList.contains('bg-dark')) {
             localStorage.setItem('tema', 'dark');
             mudarTema.innerHTML = '<i class="bi bi-sun"></i>';

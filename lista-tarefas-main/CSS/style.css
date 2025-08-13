@@ -97,36 +97,36 @@ footer{
     margin-top: 50px;
 }
 
-body.dark {
+body.bg-dark {
     background-color: #121212;
     color: white;
 }
 
-body.dark .card {
+body.bg-dark .card {
     background-color: #1e1e1e;
     color: white;
 }
 
-body.dark .list-group-item {
+body.bg-dark .list-group-item {
     background-color: #2a2a2a;
     color: white;
 }
 
-body.dark .form-control {
+body.bg-dark .form-control {
     background-color: #333;
     color: white;
     border-color: #555;
 }
 
-body.dark .form-control::placeholder, #taskData {
+body.bg-dark .form-control::placeholder, #taskData {
     color: #bbb;
 }
 
-body.dark #pendente {
+body.bg-dark #pendente {
     color: black;
 }
 
-body.dark #filtroTodos, body.dark #filtroPendentes, body.dark #filtroConcluidas  {
+body.bg-dark #filtroTodos, body.bg-dark #filtroPendentes, body.bg-dark #filtroConcluidas  {
     color: white;
 }
 
@@ -149,17 +149,17 @@ body.dark #filtroTodos, body.dark #filtroPendentes, body.dark #filtroConcluidas 
     color: #333;
 }
 
-body.dark .form-select#ordenarSelect {
+body.bg-dark .form-select#ordenarSelect {
     background-color: #042A2B;
     color: #fff;
     border-color: white; 
 }
 
-body.dark .form-select#ordenarSelect:focus {
+body.bg-dark .form-select#ordenarSelect:focus {
     border-color: white;
 }
 
-body.dark .form-select#ordenarSelect option {
+body.bg-dark .form-select#ordenarSelect option {
     background-color: #042A2B;
     color: #fff;
 }
@@ -170,7 +170,7 @@ body.dark .form-select#ordenarSelect option {
     color: #333;
 }
 
-body.dark .ordernar .form-label {
+body.bg-dark .ordernar .form-label {
     color: #fff;
 }
 

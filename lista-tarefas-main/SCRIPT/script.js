@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('tarefas', JSON.stringify(tarefas));
     }
 
-    // Função para atualizar contadores
+    // função para atualizar contadores
     function atualizarContadores() {
         taskTotal.textContent = tarefas.length;
         taskConcluidas.textContent = tarefas.filter(tarefa => tarefa.concluida).length;
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const btnGroup = document.createElement('div');
         btnGroup.className = 'btn-group btn-group-sm';
 
+        // marcar como concluida
         const inputConcluir = document.createElement('button');
         inputConcluir.className = 'btn btn-success';
         inputConcluir.innerHTML = '<i class="bi bi-check-lg"></i>';
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mostrarTarefas(filtroAtual);
         };
 
+        // remover tarefa
         const btnRemover = document.createElement('button');
         btnRemover.className = 'btn btn-danger';
         btnRemover.innerHTML = '<i class="bi bi-trash"></i>';
@@ -81,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return li;
     }
 
+    //mostrar tarefas pelos filtros
     function mostrarTarefas(filtro = "todos") {
         filtroAtual = filtro;
         taskList.innerHTML = "";
@@ -93,7 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         tarefasFiltradas.forEach((tarefa, index) => {
-            const li = criarItemTarefa(tarefa.texto, tarefa.data, tarefa.concluida, index);
+            const indexReal = tarefas.indexOf(tarefa);
+            const li = criarItemTarefa(tarefa.texto, tarefa.data, tarefa.concluida, indexReal);
             taskList.appendChild(li);
         });
 
@@ -117,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     btnPendentes.addEventListener("click", () => mostrarTarefas("pendentes"));
     btnConcluidas.addEventListener("click", () => mostrarTarefas("concluidas"));
 
+    //ordena tarefas pelo select
     ordenarSelect.addEventListener('change', function () {
         const ordem = ordenarSelect.value;
         tarefas.sort(function (a, b) {
@@ -130,15 +135,19 @@ document.addEventListener('DOMContentLoaded', function () {
         salvar();
         mostrarTarefas(filtroAtual);
     });
-
+    
+    // mudança de tema
     if (localStorage.getItem('tema') === 'dark') {
-        document.body.classList.add('dark');
+        document.body.classList.add('bg-dark');
         mudarTema.innerHTML = '<i class="bi bi-sun"></i>';
+        mudarTema.classList.add('btn-light');
+        mudarTema.classList.remove('btn-dark');
     }
 
     mudarTema.addEventListener('click', function () {
-        document.body.classList.toggle('dark');
-        if (document.body.classList.contains('dark')) {
+        document.body.classList.toggle('bg-dark');
+        
+        if (document.body.classList.contains('bg-dark')) {
             localStorage.setItem('tema', 'dark');
             mudarTema.innerHTML = '<i class="bi bi-sun"></i>';
             mudarTema.classList.add('btn-light');
